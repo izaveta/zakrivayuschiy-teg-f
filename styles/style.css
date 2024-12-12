@@ -20,7 +20,7 @@
   align-items: center;
   justify-items: center;
   margin: 0 auto;
-  font-family: var(--main-font, "Inter-Variable", sans-serif);
+  font-family: var(--main-font, "Inter-Variable"), sans-serif;
   font-size: var(--main-font-size, 18px);
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ header {
   inline-size: clamp(375px, 80%, 700px);
   display: flex;
   flex-direction: column;
-  font-family: var(--accent-font, "PressStart2P-Regular", fantasy);
+  font-family: var(--accent-font, "PressStart2P-Regular"), fantasy;
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem) 0 clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem);
   text-align: center;
   text-transform: uppercase;
@@ -67,13 +67,8 @@ a {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 52px;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 52px;
 }
 
 .card {
@@ -149,31 +144,31 @@ a {
   aspect-ratio: 1 / 1;
 }
 
-.filter__1 {
+.filter__saturate-min {
   filter: saturate(25%);
 }
 
-.filter__2 {
+.filter__saturate-max {
   filter: saturate(300%);
 }
 
-.filter__3 {
+.filter__hue-rotate {
   filter: hue-rotate(30deg);
 }
 
-.filter__4 {
+.filter__invert {
   filter: invert(0.7);
 }
 
-.filter__5 {
+.filter__sepia {
   filter: sepia(80%);
 }
 
-.filter__6 {
+.filter__blur {
   filter: blur(1rem);
 }
 
-.filter__7 {
+.filter__mix {
   filter: hue-rotate(90deg) contrast(50%) blur(0.1rem);
 }
 
@@ -282,7 +277,7 @@ dialog[open]::backdrop {
 .dialog__content {
   display: flex;
   flex-direction: row;
-  gap: 26px;
+  gap: 20px;
 }
 
 .dialog__text {
@@ -297,10 +292,14 @@ dialog[open]::backdrop {
 .button-close {
   inline-size: 100%;
   padding: 10px 17px;
+  text-transform: uppercase;
 }
 
 .dialog-icon {
   width: 100px;
+  max-inline-size: 39px;
+  max-block-size: 39px;
+  align-self: center;
 }
 
 .card__like-button {
@@ -308,7 +307,7 @@ dialog[open]::backdrop {
   cursor: pointer;
   background-color: transparent;
   appearance: none;
-  transition: border 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
   padding: 10px 17px;
 }
 
@@ -325,7 +324,6 @@ dialog[open]::backdrop {
   cursor: pointer;
   background-color: transparent;
   appearance: none;
-  transition: border 0.3s ease-in-out;
   max-block-size: 38px;
 }
 
